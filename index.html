@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Лабораторная работа №4</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="img/5.png" type="image/png">
+<body onload="onload_func()">
+	 <h1>Примеры использования Javascript Event Handlers. Изтай Зарина</h1>
+
+	
+		<form action="" name="form1" method="post">
+				<p>Введите Ваше имя: </p>
+				<input type="text" name="Name" minlength="2" ><br>
+				<input type="submit" name="send" value="Отправить" onclick="get_name()">
+		</form>
+
+		<br>
+
+		<p>Нажмите для отображения текста:</p>
+		<label for="myCheck">Отобразить:</label>  <br>
+		<input type="checkbox" id="myCheck" onclick="checkBoxFunc()">
+		<p id="text" style="display:none">Checkbox is CHECKED!</p>
+		<br>
+		<p> Событие OnSelect. В данном примере при выделении текста будет отображаться окно с сообщением.</p>
+		<form action="">
+	   	<p><textarea cols="40" rows="10" onselect="alert('Выделен текст')">
+	    	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy 
+	    	nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+	    	Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper 
+	    	suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	   	</textarea></p>
+  		</form>
+
+  		<p>При нажатии на поле, срабатывает событие OnFocus, и цвет поля меняется на желтый. Когда вы нажимаете вне поля,
+  			срабатывает событие OnBlur и цвет поля меняется на красный.
+  		</p>
+		<input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+
+		<p>Событие OnChange. Измените текст в поле и кликните вне поля.</p>
+
+		<input type="text" name="txt" value="Hello!!!" onchange="changeFunction(this.value)">
+
+		<p>
+        <b> OnMouseover and OnMouseOut Event</b> <br>
+        Наведите на картинку
+        <br><br>
+        <a href="#" onMouseOver="document.myImage.src='img/5.png'"
+        onMouseOut="document.myImage.src='img/7.png'" >
+        <img src="img/7.png" name="myImage" width="250" height="250"  target=_self >
+        </a>
+   	 </p>
+
+
+</body>
+</html>
+
